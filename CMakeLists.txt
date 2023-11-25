@@ -23,7 +23,13 @@ if(BUILD_TESTING)
   add_subdirectory(test)
 endif()
 
-install(TARGETS tinympc ARCHIVE DESTINATION lib
-        INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+install(TARGETS tinympc 
+        ARCHIVE DESTINATION lib
+        INCLUDES DESTINATION include
     )
+
+# Install the header files
+file(GLOB HEADERS "src/tinympc/*.hpp")
+install(FILES ${HEADERS} DESTINATION include/tinympc)
+
 
