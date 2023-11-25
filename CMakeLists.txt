@@ -6,6 +6,20 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include/Eigen)
 
+# Options to control the build process
+option(BUILD_TESTING "Build the test suite" OFF)
+option(BUILD_EXAMPLE "Build example applications" OFF)
+option(BUILD_CODEGEN "Build codegen components" OFF)
+
+# Add src/tinympc directory
 add_subdirectory(src/tinympc)
-add_subdirectory(examples)
-add_subdirectory(test)
+
+# Conditionally add examples and tests based on the specified options
+if(BUILD_EXAMPLE)
+  add_subdirectory(examples)
+endif()
+
+if(BUILD_TESTING)
+  add_subdirectory(test)
+endif()
+
