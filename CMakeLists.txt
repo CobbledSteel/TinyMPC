@@ -23,5 +23,7 @@ if(BUILD_TESTING)
   add_subdirectory(test)
 endif()
 
-install(TARGETS tinympc ARCHIVE DESTINATION lib)
+install(TARGETS tinympc ARCHIVE DESTINATION lib
+        INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
 
