@@ -35,6 +35,6 @@ file(GLOB EIGEN_HEADER "include/Eigen/Eigen.h")
 install(FILES ${EIGEN_HEADER} DESTINATION include/)
 
 # Install the Eigen library headers
-install(DIRECTORY "external/Eigen/Eigen" DESTINATION include)
+install(DIRECTORY "include/Eigen/Eigen" DESTINATION include)
 
 
