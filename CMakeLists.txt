@@ -34,4 +34,7 @@ install(FILES ${HEADERS} DESTINATION include/tinympc)
 file(GLOB EIGEN_HEADER "include/Eigen/Eigen.h")
 install(FILES ${EIGEN_HEADER} DESTINATION include/)
 
+# Install the Eigen library headers
+install(DIRECTORY "external/Eigen/Eigen" DESTINATION include)
+
 
