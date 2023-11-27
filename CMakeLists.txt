@@ -30,6 +30,8 @@ install(TARGETS tinympc
 
 # Install the header files
 file(GLOB HEADERS "src/tinympc/*.hpp")
+file(GLOB EIGEN_HEADER "include/Eigen.h")
 install(FILES ${HEADERS} DESTINATION include/tinympc)
+install(FILES ${EIGEN_HEADER} DESTINATION include/)
 
 
